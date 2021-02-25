@@ -14,7 +14,6 @@ export default function Portal() {
       const id = userData.user.id;
       await API.getUserById(id).then((res) => {
         setUser(res.data);
-        console.log(res.data)
         setLoading(false);
       });
     } catch (err) {
