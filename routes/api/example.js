@@ -81,8 +81,7 @@ router.post("/login", async (req, res) => {
       token,
       user: {
         id: user._id,
-        displayName: user.displayName,
-        jobType: user.jobType,
+        displayName: user.displayName
       },
     });
   } catch (err) {

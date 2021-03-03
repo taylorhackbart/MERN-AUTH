@@ -13,7 +13,6 @@ export default function Login() {
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
   
-  
 
   const submit = async (e) => {
     e.preventDefault();
@@ -23,7 +22,6 @@ export default function Login() {
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
-
       });
       const id = loginRes.data.user.id
       localStorage.setItem("auth-token", loginRes.data.token);
@@ -46,6 +44,7 @@ export default function Login() {
         <input
           id="login-username"
           type="username"
+          name= "username"
           onChange={(e) => setUsername(e.target.value)}
           placeholder="janedoe"
         />
@@ -57,6 +56,7 @@ export default function Login() {
         <input
           id="login-password"
           type="password"
+          name="password"
           onChange={(e) => setPassword(e.target.value)}
           placeholder="xxxxxx"
         />

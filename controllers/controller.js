@@ -22,7 +22,7 @@ module.exports = {
       { _id: req.params.id },
       { $set: {
         text: req.body.text
-       } },
+      } },
       { new: true }
     )
       .then((dbModel) => res.json(dbModel))
