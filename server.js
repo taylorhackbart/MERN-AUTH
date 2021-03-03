@@ -38,7 +38,7 @@ mongoose.connect(
     if (err) throw err;
     console.log("DB connection established")
 }
-);
+); 
 
 // Start the API server
 app.listen(PORT, function() {
