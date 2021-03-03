@@ -34,7 +34,7 @@ Once logged in, the "LOGIN" and "REGISTER" button change to allow the user to ac
 <img src="https://github.com/taylorhackbart/MERN-AUTH/blob/master/readmeimages/Screen%20Shot%202021-03-03%20at%201.21.02%20PM.png" />
 
 ## Installation
-To use this image upload, one must install React, Mongoose, JSONWebToke, bcryptjs, dotenv, cors, express and multer. By running npm install in the command line, all dependencies should be installed in the correct package.son files to run this app.
+To use this authenication template, one must install React, Mongoose, JSONWebToken, bcryptjs, dotenv, cors, express and multer. By running npm install in the command line, all dependencies should be installed in the correct package.son files to run this app.
 
 ## Questions
 For questions or inquiries, feel free to email me at taylor.hackbart@gmail.com or checkout my LinkedIn <a href="https://www.linkedin.com/in/taylorhackbart/" rel="noreferrer" target="_blank"> here </a>
