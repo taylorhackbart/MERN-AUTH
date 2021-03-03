@@ -2,27 +2,22 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-  process.env.MONGODB_CONNECTION_STRING 
-  ||
-  "mongodb://localhost/auth"
+  process.env.MONGODB_URI || "mongodb://localhost/auth"
 );
 
 const TextSeed = [
   {
-    text: "Text"
+    text: "Text",
   },
-
-
 ];
 
-db.Text
-  .remove({})
+db.Text.remove({})
   .then(() => db.Text.collection.insertMany(TextSeed))
-  .then(data => {
+  .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });
