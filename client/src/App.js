@@ -18,7 +18,7 @@ function App() {
     token: undefined,
     user: undefined,
   });
-
+//Checks login status, if the browser has user info stored (did not log out) then it will load this users info, otherwise it will display a "login" and "register" button in the navbar
   useEffect(() => {
     const checkLoggedIn = async () => {
       let token = localStorage.getItem("auth-token");

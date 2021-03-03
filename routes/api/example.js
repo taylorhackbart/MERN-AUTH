@@ -9,6 +9,7 @@ const Login = require("../../models/example.js");
 //   res.send("working")
 // })
 
+//Create a new user
 router.post("/register", async (req, res) => {
   try {
     let {
@@ -16,7 +17,6 @@ router.post("/register", async (req, res) => {
       password,
       passwordCheck,
       displayName,
-      jobType,
       phoneNumber,
     } = req.body;
 
@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
       return res
         .status(400)
         .json({ msg: "Enter the same password twice for verification." });
-
+//Checks to see if username exists in DB already
     const existingUser = await Login.findOne({ username: username });
     if (existingUser)
       return res
@@ -57,7 +57,7 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+//Allows user to login
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -98,7 +98,7 @@ router.delete("/delete", auth, async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+//Must have valid token to login (JWT_SECRET)
 router.post("/tokenIsValid", async (req, res) => {
   try {
     const token = req.header("x-auth-token");
@@ -133,16 +133,21 @@ router.get("/", auth, async (req, res) => {
     username: user.username
   });
 });
+
+//Grab all users
 router.get("/register", async (req, res) => {
   const user = await Login.find();
   res.json(user);
 });
 
+//Grab users by certain ID
 router.get("/register/:id", async (req, res) => {
   Login.findById(req.params.id)
     .then((dbModel) => res.json(dbModel))
     .catch((err) => res.status(422).json(err));
 });
+
+//Update user if necessary
 router.put("/register/:id", async (req, res) => {
   Login.findOneAndUpdate({ _id: req.params.id }, 
     {$set: {

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState} from "react";
 import UserContext from "../../contexts/UserContext";
 import API from "../../utils/API";
 import NoMatch from "../../pages/NoMatch";
-
+//This page is a simple portal to show the user they are signed in 
 export default function Portal() {
   const { userData } = useContext(UserContext);
   const [loading, setLoading] = useState(true);
@@ -20,8 +20,6 @@ export default function Portal() {
       console.log(err);
     }
   }, [userData]);
-
-
 
   return (
     <>

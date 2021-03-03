@@ -1,5 +1,6 @@
 import React from "react";
-
+//Simple No Match page to show the user the route theyre looking for does not exist
+//Very important for authentication as it allows users with certain contexts to access different pages
 function NoMatch() {
   return (
     <>

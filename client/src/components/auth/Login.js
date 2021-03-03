@@ -15,6 +15,7 @@ export default function Login() {
 
   const submit = async (e) => {
     e.preventDefault();
+    //Grabs username and password from db and decrypts the password
     try {
       const loginUser = { username, password };
       const loginRes = await API.loginUser(loginUser)

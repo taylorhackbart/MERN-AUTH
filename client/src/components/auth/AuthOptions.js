@@ -21,6 +21,7 @@ export default function AuthOptions() {
 
   return (
     <nav className="auth-options">
+      {/* if the user is logged in, it will show these buttons:  */}
       {userData.user ? (
         <div className="align-me">
           <div className="row-employee">
@@ -37,6 +38,7 @@ export default function AuthOptions() {
         </div>
       ) : (
         <>
+        {/* if the user is not logged in, it will show these:  */}
           <div className="align-me">
             <button className="login-button" onClick={login}>
               LOGIN

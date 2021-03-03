@@ -18,6 +18,7 @@ export default function Register() {
 
   const submit = async (e) => {
     e.preventDefault();
+    //Creates a new user for DB
     try {
       const newUser = {
         username,
@@ -35,6 +36,7 @@ export default function Register() {
           });
         };
         loadUserInfo();
+        //Pushes registered user to login page
         history.push("/login");
       });
     } catch (err) {

@@ -13,7 +13,8 @@ router
   .put(controller.update)
   .delete(controller.remove);
 
-  router
+//Matches with "/api/texts/name/:location" which is not applicable here but a good reminder to give /:name and /:id added paths for DB structure
+router
 .route("/name/:location")
 .get(controller.findAllByName)
 .put(controller.update)
