@@ -80,11 +80,13 @@ router.post("/login", async (req, res) => {
       token,
       user: {
         id: user._id,
-        displayName: user.displayName
+        displayName: user.displayName,
+        username: user.username
       },
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
+    console.log(err)
   }
 });
 
@@ -128,11 +130,11 @@ router.get("/", auth, async (req, res) => {
     token,
     displayName: user.displayName,
     id: user._id,
+    username: user.username
   });
 });
 router.get("/register", async (req, res) => {
   const user = await Login.find();
-  console.log(user);
   res.json(user);
 });
 

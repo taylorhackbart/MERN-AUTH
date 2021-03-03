@@ -34,7 +34,8 @@ const options = {
 }
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/auth", options, (err)  => { 
+  process.env.MONGODB_URI || "mongodb://localhost/auth", 
+  options, (err)  => { 
     if (err) throw err;
     console.log("DB connection established")
 }
