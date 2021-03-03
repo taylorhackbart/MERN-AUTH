@@ -1,7 +1,7 @@
 # MERN CRUD TEMPLATE
 
 ## Description
-I have created a MERN AUTH template that allows users to register and login to a website. This authentication template pushes users info directly into a DB collection created by the site owner rather than using a third party authentication DB portal (Auth0, Firebase, etc.). It allows easy access to all data for the site owner.
+I have created a MERN AUTH template that allows users to register and login to a website. This authentication template pushes users info directly into a DB collection created by the site owner rather than using a third party authentication DB portal (Auth0, Firebase, etc.). This allows easy access to all data for the site owner.
 Feel free to try out my app <a href="https://auth-template.herokuapp.com/" > here </a>
 
 ## Usage
