@@ -40,9 +40,9 @@ function App() {
         });
       }
     };
-
     checkLoggedIn();
   }, []);
+  
   return (
     <div className="page-container">
       <UserContext.Provider value={{ userData, setUserData }}>

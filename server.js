@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const cors = require("cors")
 const morgan = require("morgan")
@@ -5,7 +6,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-require('dotenv').config()
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false , limit: "100gb"}))
 app.use(bodyParser.json({limit: "100gb"}))
