@@ -49,7 +49,6 @@ router.post("/register", async (req, res) => {
       username,
       password: passwordHash,
       displayName,
-      jobType,
       phoneNumber,
     });
     const savedUser = await newUser.save();
@@ -126,10 +125,9 @@ router.get("/", auth, async (req, res) => {
   if (!user) return res.json(false);
 
   return res.json({
-    // token,
+    token,
     displayName: user.displayName,
     id: user._id,
-    jobType: user.jobType,
   });
 });
 router.get("/register", async (req, res) => {

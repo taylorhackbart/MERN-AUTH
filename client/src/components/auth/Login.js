@@ -23,7 +23,6 @@ export default function Login() {
         token: loginRes.data.token,
         user: loginRes.data.user,
       });
-      const id = loginRes.data.user.id
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/");
     } catch (err) {
@@ -38,7 +37,7 @@ export default function Login() {
       )}
       <form className="form login-form" onSubmit={submit}>
         <div className="row register-row">
-        <label htmlFor="login-username">Username (Nombre de Usuario)</label>
+        <label htmlFor="login-username">Username</label>
         </div>
         <div className="row register-row">
         <input
@@ -50,7 +49,7 @@ export default function Login() {
         />
 </div>
 <div className="row register-row">
-        <label htmlFor="login-password">Password (Contraseña)</label>
+        <label htmlFor="login-password">Password</label>
         </div>
         <div className="row register-row">
         <input
